@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhiQu.web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="foto/PhiQu.png" alt="Logo PhyQu.web" class="logo">
+            <h1 class="website-name">PhiQu.web</h1>
+        </div>
+
+        <div class="header-buttons">
+            <a href="https://wa.me/6285880541399?text=Halo%20saya%20mau%20tanya%20tentang%20PhiQu.web" class="header-button">Kontak</a>
+            <button class="header-button" id="aboutButton">Tentang</button> <!-- Tombol Tentang -->
+        </div>
+
+    </header>
+    
+    <main>
+    
+        <h2>"Assalamualaikum Warahmatullahi Wabarakatuh, hai!!!"</h2>
+        <p>"Selamat Datang di PhiQu.web"</p>
+        <p>"Senang Bertemu denganmu hari ini!!!"</p>
+
+    <!-- Modal (Layar Mengambang) -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+        <h2>Hayoloh!!!😁</h2>
+            <img src="foto/Ryuna.png" alt="Ilustrasi PhyQu.web" class="modal-image">
+        <p>Aku udah rasa dah, kalo kamu bakalan bertanya tentang PhiQu.web</p>
+        <p>Nah, sebelum aku jelasan tentang PhiQu. Kita kenalan dulu yuk!!!</p>
+        <p>Namaku adalah Ryuna Sri Delmonthe, panggil aja Ryuna.</p>
+        <p>Nah, jadi PhiQu.web adalah sebuah platform yang memungkinkan kita untuk bertemu setiap saat.. eaa😘</p>
+        <p>Disini kita juga bisa mengupload materi pembelajaran, tugas baik itu dalam bentuk file dokumen atau vidio. PhiQu.web juga memungkinkan kita untuk membuat sebuah forum seperti chatingan grup, zoom atau meet</p>
+        <p>Kalau kamu ingin tau lebih lanjut tentang PhiQu.web kamu bisa hubungi temanku Ammar Dalimunthe dengan tekan 'Kontak' ya😊</p>
+        </div>
+    </div>
+
+    <!-- Card 1: Baca Jurnal Kami -->
+<div class="card-container">
+    <div class="card" id="card-jurnal">
+        <h3>Baca Jurnal Kami</h3>
+        <p>Temukan berbagai jurnal ilmiah yang kami terbitkan untuk menambah wawasan dan pengetahuan Anda. Klik tombol di bawah untuk melihat daftar jurnal yang telah diunggah.</p>
+        <button class="card-button" id="baca-jurnal-btn">Baca Jurnal Kami</button>
+        <div class="jurnal-list" id="jurnal-list">
+            <ul>
+                <li>Jurnal 1: Pembelajaran Digital</li>
+                <li>Jurnal 2: Teknologi dan Inovasi</li>
+                <li>Jurnal 3: Manajemen Pendidikan</li>
+                <!-- Tambahkan jurnal lainnya di sini -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Card 2: Masuk Kedalam Forum -->
+    <div class="card" id="card-forum">
+        <h3>Masuk Kedalam Forum</h3>
+        <p>Bergabunglah dengan forum diskusi kami dan temukan wawasan baru dengan berbagai topik yang dibahas. Klik tombol di bawah untuk masuk ke forum.</p>
+        <button class="card-button" id="masuk-forum-btn">Masuk Kedalam Forum</button>
+    </div>
+</div>
+
+    <script>
+        // Mendapatkan modal dan tombol
+        var modal = document.getElementById("aboutModal");
+        var btn = document.getElementById("aboutButton");
+        var span = document.getElementsByClassName("close")[0];
+
+        // Ketika tombol "Tentang" diklik, modal akan ditampilkan
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Ketika tombol close (x) diklik, modal akan disembunyikan
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Jika pengguna mengklik di luar modal, modal juga akan ditutup
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
+    <script>
+                // Menambahkan interaksi untuk tombol "Baca Jurnal Kami"
+        document.getElementById("baca-jurnal-btn").addEventListener("click", function() {
+            var jurnalList = document.getElementById("jurnal-list");
+            if (jurnalList.style.display === "none" || jurnalList.style.display === "") {
+                jurnalList.style.display = "block"; // Menampilkan daftar jurnal
+            } else {
+                jurnalList.style.display = "none"; // Menyembunyikan daftar jurnal
+            }
+        });
+
+        // Interaksi tombol "Masuk Kedalam Forum" (Contoh: mengarahkan ke forum)
+        document.getElementById("masuk-forum-btn").addEventListener("click", function() {
+            window.location.href = "https://link-ke-forum.com"; // Ganti dengan URL forum Anda
+        });
+
+    </script>
+
+
+
+
+        <p>Info ini aja dulu</p>
+    <div class="info-list">
+        <div class="info-item">
+            <a href="#informasi1">
+                <image src="foto/PhiQu-removebg-preview.png" alt="Dokumentasi 1">
+                    <p>Apa aja dulu, nanti ganti</p>
+                </image>
+            </a>
+        </div>
+        <button id="show-more-btn">Lihat Selengkapnya</button>
+        <p>Info itu aja dulu</p>
+        <div class="info-item">
+            <a href="#informasi2">
+                <image src="foto/Wallpaper.png" alt="Dokumentasi 2">
+                    <p>Apa aja dulu, nanti ganti 2</p>
+                </image>
+            </a>
+        </div>
+        <button id="show-more-btn">Lihat Selengkapnya</button>
+    </div>
+
+
+
+
+
+    </main>
+    <footer>
+        <div class="footer-container">
+            <!-- Tautan cepat -->
+            <div class="footer-links">
+            <!-- Media sosial -->
+            <div class="footer-social">
+                <h3>Ikuti Kami</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><img src="foto/facebook.png" alt="Facebook">Facebook</a>
+                    <a href="https://instagram.com" target="_blank"><img src="foto/instagram.png" alt="Instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PhiQu.web.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,362 @@
+/* Mengatur tampilan body dan struktur halaman */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1; /* Warna latar belakang halaman utama */
+    display: flex;
+    flex-direction: column; /* Mengatur tata letak kolom */
+}
+
+/* Konten utama halaman */
+main {
+    flex: 1; /* Membuat konten utama fleksibel */
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Header untuk logo dan nama website */
+header {
+    background-color: #40916c; /* Warna latar belakang header */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center; /* Menyelaraskan vertikal logo dan teks */
+    z-index: 1000;
+    position: relative;
+}
+
+/* Logo dan nama website */
+.logo-container {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, color 0.3s ease; /* Efek transisi pada seluruh kontainer */
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px; /* Spasi antara logo dan nama website */
+    transition: transform 0.3s ease; /* Efek transisi pada logo */
+}
+
+.website-name {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Efek transisi pada warna teks */
+}
+
+/* Efek hover pada logo dan nama */
+.logo-container:hover {
+    transform: rotate(-10deg); /* Memiringkan logo dan nama website */
+}
+
+.logo-container:hover .logo {
+    transform: rotate(10deg);
+}
+
+.logo-container:hover .website-name {
+    color: #ff0000; /* Mengubah warna nama website */
+}
+
+/* Tombol di header */
+.header-buttons {
+    margin-left: auto; /* Menggeser tombol ke kanan */
+    display: flex;
+    gap: 15px;
+    position: fixed, absolute; /* Menetapkan posisi tombol tetap di atas */
+    top: 10px; /* Menentukan jarak dari atas */
+    right: 10px; /* Menentukan jarak dari kanan */
+    z-index: 1000; /* Pastikan tombol berada di atas konten lainnya */
+    margin-left: auto; /* Menggeser tombol ke kanan */
+    display: flex;
+    gap: 15px;
+}
+
+.header-button {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color: #2d6a4f;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: #ff0000; /* Warna berubah saat di-hover */
+}
+
+/* Container untuk card */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Styling untuk card */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 280px; /* Ukuran lebar card */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efek hover card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling judul pada card */
+.card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Styling deskripsi dalam card */
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk tombol card */
+.card-button {
+    background-color: #40916c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #2d6a4f;
+}
+
+/* List jurnal yang tersembunyi secara default */
+.jurnal-list {
+    display: none;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.jurnal-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.jurnal-list li {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/*untuk tombol info dibawah*/
+.info-list {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(red, green, blue, alpha);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    background-color: #66ff00;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.info-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
+}
+
+.info-item a {
+    text-decoration: none;
+    color:aliceblue;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.info-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#show-more-btn {
+    background-color: #40916c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+  
+#show-more-btn:hover {
+    background-color: #2d6a4f;
+}
+
+
+
+
+/* Footer */
+footer {
+    background-color: #40916c; /* Warna latar belakang */
+    color: white;
+    padding: 0.01px 0; /* Padding vertikal */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Agar fleksibel untuk layar kecil */
+    padding: 0 10%;
+    text-align: left;
+}
+
+.footer-about h3,
+.footer-links h3,
+.footer-social h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Efek hover pada tautan */
+}
+
+.footer-social .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    padding: 5px; /* Tambahkan padding untuk latar warna */
+    border-radius: 50%; /* Membuat ikon berbentuk lingkaran */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi halus */
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1); /* Membuat ikon putih di atas background gelap */
+}
+
+.footer-social .social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Latar semi-transparan saat hover */
+    transform: scale(1.1); /* Memperbesar ikon sedikit */
+}
+
+.footer-social .social-icons a:active {
+    background-color: rgba(253, 3, 3, 0.4); /* Latar lebih terang saat ditekan */
+    transform: scale(0.95); /* Mengecilkan ikon sedikit */
+}
+
+/* Modal */
+.modal {
+    display: none; /* Modal disembunyikan secara default */
+    position: fixed;
+    z-index: 1; /* Pastikan modal muncul di atas konten lain */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan gelap */
+    padding-top: 60px; /* Memberikan jarak dari atas */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modal-image {
+    width: 20%;
+    max-height: 500px; /* Sesuaikan tinggi gambar */
+    object-fit: cover; /* Agar gambar terpotong dengan proporsional */
+    margin-bottom: 20px; /* Memberikan jarak di bawah gambar */
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}

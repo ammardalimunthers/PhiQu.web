@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b7e4c7; /* Latar belakang hijau lembut */
+    color: white;
+}
+
+/* Logo dan Nama Website */
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Spasi di bawah logo dan nama */
+}
+
+.login-image img {
+    width: 80px; /* Ukuran gambar lebih kecil */
+    height: auto; /* Menjaga proporsi gambar */
+    margin-right: 10px; /* Spasi antara gambar dan nama website */
+}
+
+.website-name h1 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #40916c; /* Warna hijau */
+}
+
+/* Kotak Login */
+.login-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Header Form */
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #40916c; /* Warna hijau gelap */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    max-width: 380px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Tombol Login */
+.login-box button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #40916c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-box button:hover {
+    background-color: #2d6a4f;
+}
+
+/* Link Register */
+.login-form a {
+    display: inline-block;
+    margin-top: 15px; /* Jarak antara tombol login dan link register */
+    font-size: 14px;
+    color: #40916c; /* Warna hijau */
+    text-decoration: none; /* Menghapus garis bawah */
+}
+
+.login-form a:hover {
+    color: #f55308; /* Warna saat link dihover */
+}
+
+/* Tablet (layar lebar maksimal 768px) */
+@media (max-width: 768px) {
+    .login-box {
+        width: 90%; /* Sesuaikan lebar kotak login */
+        padding: 20px;
+    }
+
+    .login-image img {
+        width: 60px; /* Ukuran gambar lebih kecil */
+    }
+
+    .website-name h1 {
+        font-size: 14px;
+    }
+
+    .login-box h2 {
+        font-size: 20px;
+    }
+
+    .form-group input {
+        max-width: 100%; /* Input menyesuaikan lebar kotak login */
+    }
+
+    .login-box button {
+        font-size: 14px;
+    }
+}
+
+/* Handphone (layar lebar maksimal 480px) */
+@media (max-width: 480px) {
+    .login-box {
+        width: 480px; /* Hampir penuh pada layar kecil */
+        padding: 15px;
+    }
+
+    .login-image img {
+        width: 50px; /* Ukuran gambar lebih kecil */
+    }
+
+    .website-name h1 {
+        font-size: 12px;
+    }
+
+    .login-box h2 {
+        font-size: 18px;
+    }
+
+    .form-group input {
+        width: 50%; /* Agar input tidak lebih lebar dari kotak login */
+        max-width: 150%; /* Pastikan lebar maksimalnya 100% */
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        margin: 5px auto; /* Menambahkan margin sedikit agar tidak menempel ke atas/bawah */
+        display: block;
+    }
+
+    .login-box button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
